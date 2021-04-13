@@ -5,3 +5,7 @@ runtime: java
 build_image: fnproject/fn-java-fdk-build:jdk11-1.0.127
 run_image: fnproject/fn-java-fdk:jre11-1.0.127
 cmd: com.example.fn.HelloFunction::handleRequest
+triggers:
+- name: hello
+  type: http
+  source: /hello
